@@ -8,15 +8,14 @@ import pandas as pd
 ########### Define your variables ######
 
 tabtitle = 'Old McDonald'
-sourceurl = 'https://plot.ly/python/choropleth-maps/'
-githublink = 'https://github.com/austinlasseter/agriculture-exports-map'
+sourceurl = 'https://afdc.energy.gov/data/'
+githublink = 'https://github.com/yibaiyilan/306-agriculture-exports-dropdown.git'
 # here's the list of possible columns to choose from.
 list_of_columns =['Automobiles','Electric Vehicle']
 
 
 ########## Set up the chart
 
-import pandas as pd
 df = pd.read_csv('assets/usa-2020-auto.csv')
 
 ########### Initiate the app
