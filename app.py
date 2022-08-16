@@ -51,12 +51,11 @@ app.layout = html.Div(children=[
 @app.callback(Output('figure-1', 'figure'),
              [Input('options-drop', 'value')])
 def make_figure(varname):
-    mygraphtitle = f'Registratioin of {varname} in 2011'
-    mycolorscale = 'ylorrd' # Note: The error message will list possible color scales.
     mycolorbartitle = "Number of Registration"
-
+    mygraphtitle = f'Registratioin of {varname} in 2020'
+    mycolorscale = 'Teal' # Note: The error message will list possible color scales.
     data=go.Choropleth(
-        locations=df['code'], # Spatial coordinates
+        locations=df['Code'], # Spatial coordinates
         locationmode = 'USA-states', # set of locations match entries in `locations`
         z = df[varname].astype(float), # Data to be color-coded
         colorscale = mycolorscale,
